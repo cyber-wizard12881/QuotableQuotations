@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Service="QuotableQuotations.Services.Classes.QuotableQuotationsReliableWcfService" %>

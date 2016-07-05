@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBF26AF0-99D2-4D51-95BC-9F57FD53B4F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuotableQuotations.UnitTests</RootNamespace>
+    <AssemblyName>QuotableQuotations.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationServices\QuotationServiceTest.cs" />
+    <Compile Include="Mappers\QuotableQuotationsMapperTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WcfServices\QuotableQuotationsReadOnlyReliableWcfServiceTest.cs" />
+    <Compile Include="WcfServices\QuotableQuotationsReliableWcfServiceTest.cs" />
+    <Compile Include="WcfServices\QuotableQuotationsWcfServiceTest.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuotableQuotations.ApplicationServices\QuotableQuotations.ApplicationServices.csproj">
+      <Project>{682304b6-f4bb-4ba7-b032-5da5c16222be}</Project>
+      <Name>QuotableQuotations.ApplicationServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuotableQuotations.Contracts\QuotableQuotations.Contracts.csproj">
+      <Project>{bcaf2659-19f3-4b16-9d2a-e8a8a94dd350}</Project>
+      <Name>QuotableQuotations.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuotableQuotations.Core\QuotableQuotations.Core.csproj">
+      <Project>{ea06dbfb-f36f-4029-832e-4f01d77bede7}</Project>
+      <Name>QuotableQuotations.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuotableQuotations.DomainServices\QuotableQuotations.DomainServices.csproj">
+      <Project>{5b1bea5f-c96c-43f7-8e7c-1bae458bc52b}</Project>
+      <Name>QuotableQuotations.DomainServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuotableQuotations.Services\QuotableQuotations.Services.csproj">
+      <Project>{76057400-f135-46e4-b205-12ae54ac1991}</Project>
+      <Name>QuotableQuotations.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
