@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="QuotableQuotationsWcfService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:41280/QuotableQuotationsWcfService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:41280/QuotableQuotationsWcfService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:41280/QuotableQuotationsWcfService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/QuotableQuotations.Contracts.Classes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IQuotableQuotationsWcfService_GetAllQuotations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQuotations" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_GetAllQuotations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQuotationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_GetQuotations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuotations" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_GetQuotations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuotationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_GetQuotationsByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuotationsByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_GetQuotationsByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuotationsByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_GetQuotationsByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuotationsByName" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_GetQuotationsByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuotationsByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_CreateQuotation_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateQuotation" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_CreateQuotation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateQuotationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_UpdateQuotation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQuotation" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_UpdateQuotation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQuotationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_DeleteQuotation_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteQuotation" />
+  </wsdl:message>
+  <wsdl:message name="IQuotableQuotationsWcfService_DeleteQuotation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteQuotationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IQuotableQuotationsWcfService">
+    <wsdl:operation name="GetAllQuotations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/GetAllQuotations" message="tns:IQuotableQuotationsWcfService_GetAllQuotations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/GetAllQuotationsResponse" message="tns:IQuotableQuotationsWcfService_GetAllQuotations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/GetQuotations" message="tns:IQuotableQuotationsWcfService_GetQuotations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/GetQuotationsResponse" message="tns:IQuotableQuotationsWcfService_GetQuotations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotationsByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/GetQuotationsByCategory" message="tns:IQuotableQuotationsWcfService_GetQuotationsByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/GetQuotationsByCategoryResponse" message="tns:IQuotableQuotationsWcfService_GetQuotationsByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotationsByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/GetQuotationsByName" message="tns:IQuotableQuotationsWcfService_GetQuotationsByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/GetQuotationsByNameResponse" message="tns:IQuotableQuotationsWcfService_GetQuotationsByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateQuotation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/CreateQuotation" message="tns:IQuotableQuotationsWcfService_CreateQuotation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/CreateQuotationResponse" message="tns:IQuotableQuotationsWcfService_CreateQuotation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQuotation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/UpdateQuotation" message="tns:IQuotableQuotationsWcfService_UpdateQuotation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/UpdateQuotationResponse" message="tns:IQuotableQuotationsWcfService_UpdateQuotation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQuotation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/DeleteQuotation" message="tns:IQuotableQuotationsWcfService_DeleteQuotation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuotableQuotationsWcfService/DeleteQuotationResponse" message="tns:IQuotableQuotationsWcfService_DeleteQuotation_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IQuotableQuotationsWcfService" type="tns:IQuotableQuotationsWcfService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllQuotations">
+      <soap:operation soapAction="http://tempuri.org/IQuotableQuotationsWcfService/GetAllQuotations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotations">
+      <soap:operation soapAction="http://tempuri.org/IQuotableQuotationsWcfService/GetQuotations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotationsByCategory">
+      <soap:operation soapAction="http://tempuri.org/IQuotableQuotationsWcfService/GetQuotationsByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotationsByName">
+      <soap:operation soapAction="http://tempuri.org/IQuotableQuotationsWcfService/GetQuotationsByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateQuotation">
+      <soap:operation soapAction="http://tempuri.org/IQuotableQuotationsWcfService/CreateQuotation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQuotation">
+      <soap:operation soapAction="http://tempuri.org/IQuotableQuotationsWcfService/UpdateQuotation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQuotation">
+      <soap:operation soapAction="http://tempuri.org/IQuotableQuotationsWcfService/DeleteQuotation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QuotableQuotationsWcfService">
+    <wsdl:port name="BasicHttpBinding_IQuotableQuotationsWcfService" binding="tns:BasicHttpBinding_IQuotableQuotationsWcfService">
+      <soap:address location="http://localhost:41280/QuotableQuotationsWcfService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

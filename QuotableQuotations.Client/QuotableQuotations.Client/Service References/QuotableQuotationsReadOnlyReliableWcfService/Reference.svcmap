@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="18e9552f-78b2-48fb-a52f-5f136a870f3f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:41280/QuotableQuotationsReadOnlyReliableWcfService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="QuotableQuotationsReadOnlyReliableWcfService.disco" MetadataType="Disco" ID="7bf8d088-76d1-443b-9d14-75f3fe7a2fe8" SourceId="1" SourceUrl="http://localhost:41280/QuotableQuotationsReadOnlyReliableWcfService.svc?disco" />
+    <MetadataFile FileName="QuotableQuotationsReadOnlyReliableWcfService.xsd" MetadataType="Schema" ID="4baecb55-dfca-4a2d-aaf8-3eb33b5f115d" SourceId="1" SourceUrl="http://localhost:41280/QuotableQuotationsReadOnlyReliableWcfService.svc?xsd=xsd0" />
+    <MetadataFile FileName="QuotableQuotationsReadOnlyReliableWcfService1.xsd" MetadataType="Schema" ID="373fbcec-1311-4e16-beff-18b2500ba170" SourceId="1" SourceUrl="http://localhost:41280/QuotableQuotationsReadOnlyReliableWcfService.svc?xsd=xsd2" />
+    <MetadataFile FileName="QuotableQuotationsReadOnlyReliableWcfService2.xsd" MetadataType="Schema" ID="d698a024-6bf7-49de-a3e2-690e988af0f6" SourceId="1" SourceUrl="http://localhost:41280/QuotableQuotationsReadOnlyReliableWcfService.svc?xsd=xsd3" />
+    <MetadataFile FileName="QuotableQuotationsReadOnlyReliableWcfService3.xsd" MetadataType="Schema" ID="10c3be03-6427-43ed-b28c-280d5e2c8ba3" SourceId="1" SourceUrl="http://localhost:41280/QuotableQuotationsReadOnlyReliableWcfService.svc?xsd=xsd1" />
+    <MetadataFile FileName="QuotableQuotationsReadOnlyReliableWcfService.wsdl" MetadataType="Wsdl" ID="31b32c11-1f0f-4145-8da0-f2736d3eb53e" SourceId="1" SourceUrl="http://localhost:41280/QuotableQuotationsReadOnlyReliableWcfService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
